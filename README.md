@@ -1,13 +1,21 @@
-OS2Web iFrame Field
+OS2Web Kulturnaut Integration
 ==============================
 
 Description
 -----------
-This module provides an iFrame field display to text fields.
-The field can be adjusted in width and height.
+This module provides an integration with events from Kulturnaut website.
 
 Dependencies
 -----------
+- date
+- features
+- feeds
+- feeds_xpathparser
+- filefield_sources
+- image
+- strongarm
+- views
+- job_scheduler
 
 Installation
 -----------

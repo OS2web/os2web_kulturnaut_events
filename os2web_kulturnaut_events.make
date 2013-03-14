@@ -27,6 +27,9 @@ projects[panels][version] = "3.2"
 projects[ctools][subdir] = "contrib"
 projects[ctools][version] = "1.2"
 
+projects[views][subdir] = "contrib"
+projects[views][version] = "3.5"
+
 projects[date][subdir] = "contrib"
 projects[date][version] = "2.6"
 
@@ -38,9 +41,6 @@ projects[pathauto][version] = "1.1"
 
 projects[entityreference][subdir] = "contrib"
 projects[entityreference][version] = "1.0"
-
-projects[date][subdir] = "contrib"
-projects[date][version] = "2.6"
 
 projects[job_scheduler][subdir] = "contrib"
 projects[job_scheduler][version] = "2.0-alpha3"
