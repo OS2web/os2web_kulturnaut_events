@@ -53,3 +53,6 @@ projects[feeds][patch][] = "http://drupal.org/files/issues/feeds_hierarchical_te
 projects[feeds][patch][] = "http://drupal.org/files/feeds-taxonomy-text-format-1466170-1.patch"
 ; Patch to enable Proxy support
 ; projects[feeds][patch][] = "patches/feeds-proxy.patch"
+
+projects[feeds_xpathparser][subdir] = "contrib"
+projects[feeds_xpathparser][version] = "1.x-dev"

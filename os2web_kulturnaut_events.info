@@ -8,6 +8,7 @@ project = os2web_kulturnaut_events
 dependencies[] = date
 dependencies[] = features
 dependencies[] = feeds
+dependencies[] = feeds_xpathparser
 dependencies[] = filefield_sources
 dependencies[] = image
 dependencies[] = strongarm
