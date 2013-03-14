@@ -41,3 +41,6 @@ projects[entityreference][version] = "1.0"
 
 projects[date][subdir] = "contrib"
 projects[date][version] = "2.6"
+
+projects[ctools][subdir] = "contrib"
+projects[ctools][version] = "1.2"
