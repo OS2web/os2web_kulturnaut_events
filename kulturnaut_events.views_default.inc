@@ -11,7 +11,7 @@ function kulturnaut_events_views_default_views() {
   $export = array();
 
   $view = new view();
-  $view->name = 'kulturnaut_events_lister';
+  $view->name = 'os2web_kulturnaut_events_lists';
   $view->description = 'Side, block og andre visninger af Kulturnaut begivenheder fra Kulturnaut.';
   $view->tag = 'default';
   $view->base_table = 'node';
@@ -74,18 +74,18 @@ function kulturnaut_events_views_default_views() {
   $handler->display->display_options['fields']['imported_1']['date_format'] = 'custom';
   $handler->display->display_options['fields']['imported_1']['custom_date_format'] = 'd';
   /* Felt: Indhold: Hjemmeside */
-  $handler->display->display_options['fields']['field_homepage']['id'] = 'field_homepage';
-  $handler->display->display_options['fields']['field_homepage']['table'] = 'field_data_field_homepage';
-  $handler->display->display_options['fields']['field_homepage']['field'] = 'field_homepage';
-  $handler->display->display_options['fields']['field_homepage']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_os2web_kulturnaut_homepage']['id'] = 'field_os2web_kulturnaut_homepage';
+  $handler->display->display_options['fields']['field_os2web_kulturnaut_homepage']['table'] = 'field_data_field_os2web_kulturnaut_homepage';
+  $handler->display->display_options['fields']['field_os2web_kulturnaut_homepage']['field'] = 'field_os2web_kulturnaut_homepage';
+  $handler->display->display_options['fields']['field_os2web_kulturnaut_homepage']['exclude'] = TRUE;
   /* Felt: Indhold: Titel */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['title']['alter']['text'] = '<a href=[field_homepage] title=[title]>[title]</a>';
-  $handler->display->display_options['fields']['title']['alter']['path'] = '[field_homepage]';
+  $handler->display->display_options['fields']['title']['alter']['text'] = '<a href=[field_os2web_kulturnaut_homepage] title=[title]>[title]</a>';
+  $handler->display->display_options['fields']['title']['alter']['path'] = '[field_os2web_kulturnaut_homepage]';
   $handler->display->display_options['fields']['title']['alter']['external'] = TRUE;
   $handler->display->display_options['fields']['title']['alter']['alt'] = '[title]';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
@@ -109,7 +109,7 @@ function kulturnaut_events_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'knactivity' => 'knactivity',
+    'os2web_kulturnaut_knactivity' => 'os2web_kulturnaut_knactivity',
   );
 
   /* Display: Page */
@@ -138,7 +138,7 @@ function kulturnaut_events_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '2';
   $handler->display->display_options['pager']['options']['offset'] = '0';
-  $translatables['kulturnaut_events_lister'] = array(
+  $translatables['os2web_kulturnaut_events_lists'] = array(
     t('Master'),
     t('Nyeste begivenheder fra Kulturnaut.dk'),
     t('mere'),
@@ -160,13 +160,13 @@ function kulturnaut_events_views_default_views() {
 </div>
 '),
     t('Hjemmeside'),
-    t('<a href=[field_homepage] title=[title]>[title]</a>'),
+    t('<a href=[field_os2web_kulturnaut_homepage] title=[title]>[title]</a>'),
     t('[title]'),
     t('Page'),
     t('Blok - indholdsside'),
     t('Blok - forside'),
   );
-  $export['kulturnaut_events_lister'] = $view;
+  $export['os2web_kulturnaut_events_lists'] = $view;
 
   return $export;
 }

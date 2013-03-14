@@ -13,7 +13,7 @@ function kulturnaut_events_feeds_importer_default() {
   $feeds_importer = new stdClass();
   $feeds_importer->disabled = FALSE; /* Edit this to true to make a default feeds_importer disabled initially */
   $feeds_importer->api_version = 1;
-  $feeds_importer->id = 'kulturnaut_events_import';
+  $feeds_importer->id = 'os2web_kulturnaut_feeds_import';
   $feeds_importer->config = array(
     'name' => 'Kulturnaut begivenheder',
     'description' => 'Importere kulturnaut begivenheder fra Kulturnaut.',
@@ -66,7 +66,7 @@ function kulturnaut_events_feeds_importer_default() {
     'processor' => array(
       'plugin_key' => 'FeedsNodeProcessor',
       'config' => array(
-        'content_type' => 'knactivity',
+        'content_type' => 'os2web_kulturnaut_knactivity',
         'expire' => '31536000',
         'author' => '1',
         'mappings' => array(
@@ -77,27 +77,27 @@ function kulturnaut_events_feeds_importer_default() {
           ),
           1 => array(
             'source' => 'xpathparser:2',
-            'target' => 'field_beskrivelse',
+            'target' => 'field_os2web_kulturnaut_descrip',
             'unique' => FALSE,
           ),
           2 => array(
             'source' => 'xpathparser:4',
-            'target' => 'field_homepage',
+            'target' => 'field_os2web_kulturnaut_homepage',
             'unique' => FALSE,
           ),
           3 => array(
             'source' => 'xpathparser:7',
-            'target' => 'field_stednavn',
+            'target' => 'field_os2web_kulturnaut_sname',
             'unique' => FALSE,
           ),
           4 => array(
             'source' => 'xpathparser:13',
-            'target' => 'field_dato:start',
+            'target' => 'field_os2web_kulturnaut_date:start',
             'unique' => FALSE,
           ),
           5 => array(
             'source' => 'xpathparser:14',
-            'target' => 'field_dato:end',
+            'target' => 'field_os2web_kulturnaut_date:end',
             'unique' => FALSE,
           ),
           6 => array(
@@ -117,7 +117,7 @@ function kulturnaut_events_feeds_importer_default() {
     'import_on_create' => 1,
     'process_in_background' => 0,
   );
-  $export['kulturnaut_events_import'] = $feeds_importer;
+  $export['os2web_kulturnaut_feeds_import'] = $feeds_importer;
 
   return $export;
 }
