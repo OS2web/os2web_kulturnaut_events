@@ -7,7 +7,7 @@
 /**
  * Implements hook_feeds_importer_default().
  */
-function kulturnaut_events_feeds_importer_default() {
+function os2web_kulturnaut_events_feeds_importer_default() {
   $export = array();
 
   $feeds_importer = new stdClass();

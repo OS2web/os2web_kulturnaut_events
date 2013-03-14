@@ -7,7 +7,7 @@
 /**
  * Implements hook_strongarm().
  */
-function kulturnaut_events_strongarm() {
+function os2web_kulturnaut_events_strongarm() {
   $export = array();
 
   $strongarm = new stdClass();

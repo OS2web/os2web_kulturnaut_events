@@ -7,7 +7,7 @@
 /**
  * Implements hook_field_default_fields().
  */
-function kulturnaut_events_field_default_fields() {
+function os2web_kulturnaut_events_field_default_fields() {
   $fields = array();
 
   // Exported field: 'node-os2web_kulturnaut_knactivity-field_os2web_kulturnaut_descrip'.
