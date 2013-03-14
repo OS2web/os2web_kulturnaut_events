@@ -42,6 +42,9 @@ projects[entityreference][version] = "1.0"
 projects[date][subdir] = "contrib"
 projects[date][version] = "2.6"
 
+projects[job_scheduler][subdir] = "contrib"
+projects[job_scheduler][version] = "2.0-alpha3"
+
 projects[feeds][subdir] = "contrib"
 projects[feeds][version] = "2.0-alpha4"
 ; Patch to support import of hierarchical taxonomy terms
