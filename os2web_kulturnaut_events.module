@@ -4,4 +4,4 @@
  * Code for the Kulturnaut events feature.
  */
 
-include_once('kulturnaut_events.features.inc');
+include_once('os2web_kulturnaut_events.features.inc');
