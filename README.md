@@ -1,21 +1,22 @@
-OS2Web Kulturnaut Integration
+OS2Web Base Panels
 ==============================
 
 Description
 -----------
-This module provides an integration with events from Kulturnaut website.
+This module provides basic panels to your OS2Web project
 
 Dependencies
 -----------
-- date
+- ctools
+- delta
 - features
-- feeds
-- feeds_xpathparser
-- filefield_sources
-- image
+- jcarousel
+- menu
+- page_manager
+- panels_mini
+- panels_node
 - strongarm
 - views
-- job_scheduler
 
 Installation
 -----------
