@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * kulturnaut_events.feeds_importer_default.inc
+ * os2web_kulturnaut_events.feeds_importer_default.inc
  */
 
 /**
@@ -29,35 +29,37 @@ function os2web_kulturnaut_events_feeds_importer_default() {
       'plugin_key' => 'FeedsXPathParserXML',
       'config' => array(
         'sources' => array(
-          'xpathparser:1' => 'overskrift',
           'xpathparser:2' => 'beskrivelse',
           'xpathparser:4' => 'concat(\'http://www.djurslive.dk\', substring-after(url,\'.dk\'))',
           'xpathparser:7' => 'sted',
           'xpathparser:13' => 'startdato',
           'xpathparser:14' => 'slutdato',
           'xpathparser:15' => 'url',
+          'xpathparser:16' => 'overskrift',
         ),
         'rawXML' => array(
-          'xpathparser:1' => 0,
           'xpathparser:2' => 0,
           'xpathparser:4' => 0,
           'xpathparser:7' => 0,
           'xpathparser:13' => 0,
           'xpathparser:14' => 0,
           'xpathparser:15' => 0,
+          'xpathparser:16' => 0,
         ),
         'context' => '/main/arrlist/arr',
         'exp' => array(
           'errors' => 1,
+          'tidy' => 0,
+          'tidy_encoding' => 'UTF8',
           'debug' => array(
-            'context' => 0,
-            'xpathparser:1' => 0,
-            'xpathparser:2' => 0,
-            'xpathparser:4' => 0,
-            'xpathparser:7' => 0,
-            'xpathparser:13' => 0,
-            'xpathparser:14' => 0,
-            'xpathparser:15' => 0,
+            'context' => 'context',
+            'xpathparser:2' => 'xpathparser:2',
+            'xpathparser:4' => 'xpathparser:4',
+            'xpathparser:7' => 'xpathparser:7',
+            'xpathparser:13' => 'xpathparser:13',
+            'xpathparser:14' => 'xpathparser:14',
+            'xpathparser:15' => 'xpathparser:15',
+            'xpathparser:16' => 'xpathparser:16',
           ),
         ),
         'allow_override' => 0,
@@ -66,48 +68,48 @@ function os2web_kulturnaut_events_feeds_importer_default() {
     'processor' => array(
       'plugin_key' => 'FeedsNodeProcessor',
       'config' => array(
-        'content_type' => 'os2web_kulturnaut_knactivity',
         'expire' => '31536000',
         'author' => '1',
         'mappings' => array(
           0 => array(
-            'source' => 'xpathparser:1',
-            'target' => 'title',
-            'unique' => FALSE,
-          ),
-          1 => array(
             'source' => 'xpathparser:2',
             'target' => 'field_os2web_kulturnaut_descrip',
             'unique' => FALSE,
           ),
-          2 => array(
+          1 => array(
             'source' => 'xpathparser:4',
             'target' => 'field_os2web_kulturnaut_homepage',
             'unique' => FALSE,
           ),
-          3 => array(
+          2 => array(
             'source' => 'xpathparser:7',
             'target' => 'field_os2web_kulturnaut_sname',
             'unique' => FALSE,
           ),
-          4 => array(
+          3 => array(
             'source' => 'xpathparser:13',
             'target' => 'field_os2web_kulturnaut_date:start',
             'unique' => FALSE,
           ),
-          5 => array(
+          4 => array(
             'source' => 'xpathparser:14',
             'target' => 'field_os2web_kulturnaut_date:end',
             'unique' => FALSE,
           ),
-          6 => array(
+          5 => array(
             'source' => 'xpathparser:15',
             'target' => 'url',
             'unique' => 1,
           ),
+          6 => array(
+            'source' => 'xpathparser:16',
+            'target' => 'title',
+            'unique' => FALSE,
+          ),
         ),
-        'update_existing' => '2',
+        'update_existing' => '1',
         'input_format' => 'full_html',
+        'bundle' => 'os2web_kulturnaut_knactivity',
       ),
     ),
     'content_type' => '',

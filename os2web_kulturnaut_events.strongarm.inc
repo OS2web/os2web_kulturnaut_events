@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * kulturnaut_events.strongarm.inc
+ * os2web_kulturnaut_events.strongarm.inc
  */
 
 /**
