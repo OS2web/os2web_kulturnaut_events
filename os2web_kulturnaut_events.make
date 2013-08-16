@@ -24,8 +24,8 @@ projects[panels][version] = "3.2"
 
 
 ; Basic
-projects[ctools][subdir] = "contrib"
-projects[ctools][version] = "1.3"
+# projects[ctools][subdir] = "contrib"
+# projects[ctools][version] = "1.3"
 
 projects[views][subdir] = "contrib"
 projects[views][version] = "3.7"
@@ -37,7 +37,7 @@ projects[filefield_sources][subdir] = "contrib"
 projects[filefield_sources][version] = "1.8"
 
 projects[pathauto][subdir] = "contrib"
-projects[pathauto][version] = "1.1"
+projects[pathauto][version] = "1.2"
 
 projects[entityreference][subdir] = "contrib"
 projects[entityreference][version] = "1.0"

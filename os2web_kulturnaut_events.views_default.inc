@@ -187,8 +187,8 @@ function os2web_kulturnaut_events_views_default_views() {
   $handler->display->display_options['fields']['imported_1']['label'] = '';
   $handler->display->display_options['fields']['imported_1']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['imported_1']['alter']['text'] = '<div class="calendar">
-<div class="calendar-bottom">[field_os2web_kulturnaut_date_1]</div>
-<div class="calendar-top">[field_os2web_kulturnaut_date]</div>
+<div class="calendar-top">[field_os2web_kulturnaut_date_1]</div>
+<div class="calendar-bottom">[field_os2web_kulturnaut_date]</div>
 </div>
 ';
   $handler->display->display_options['fields']['imported_1']['element_label_colon'] = FALSE;
@@ -243,8 +243,8 @@ function os2web_kulturnaut_events_views_default_views() {
     t('Blok - forside'),
     t('[field_os2web_kulturnaut_date_1]'),
     t('<div class="calendar">
-<div class="calendar-bottom">[field_os2web_kulturnaut_date_1]</div>
-<div class="calendar-top">[field_os2web_kulturnaut_date]</div>
+<div class="calendar-top">[field_os2web_kulturnaut_date_1]</div>
+<div class="calendar-bottom">[field_os2web_kulturnaut_date]</div>
 </div>
 '),
   );
